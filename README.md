@@ -21,3 +21,9 @@ Run `npm run build` with Node.js 22 or later. The resulting `dist/` contains the
 - Original support email: `mailto:flankhuh@gmail.com`
 
 Brand contact: `mailto:contact@neuritlab.com`. Google Play is shown as upcoming until a public listing is available. Product screenshots use example portfolio data, not customer data. Add future products as sibling articles inside `#work`.
+
+## Text-first brand identity
+
+`brand.html` compares three typography directions and documents the applied A system. The homepage uses a horizontal English/Korean lockup in the desktop header, a stacked lockup on small mobile screens and in Hero/footer, and the letter abbreviation `NL` as its favicon. It uses system fonts and the existing palette.
+
+To edit: brand names and main slogan are in `index.html`; `.brand-en`, `.brand-ko`, `.wordmark`, `.hero-brand` and `.footer-brand` in `styles.css` control weight, spacing, size and alignment. Keep the exact main slogan. `assets/favicon.svg` holds the small `NL` abbreviation. Version stylesheet/favicon query strings after future visual updates to refresh caches.
