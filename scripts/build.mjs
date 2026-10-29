@@ -5,7 +5,7 @@ const html = await readFile(path.join(root, 'index.html'), 'utf8');
 for (const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)) {
   const url = match[1];
   if (url.startsWith('/') || /^[a-z]+:/i.test(url)) continue;
-  await readFile(path.join(root, url));
+  await readFile(path.join(root, url.split(/[?#]/)[0]));
 }
 for (const expected of ['빠름보다 깊고,', '새로움보다 오래가는 것을 연구합니다.', 'https://plant-backend-720347906835.asia-east1.run.app/legal/privacy', 'https://plant-backend-720347906835.asia-east1.run.app/legal/terms']) {
   if (!html.includes(expected)) throw new Error(`Required content missing: ${expected}`);
